@@ -14,7 +14,10 @@
   <name>PostgreSQL Database Plugin</name>
 
   <url>https://wiki.jenkins-ci.org/display/JENKINS/PostgreSQL+Database+Plugin</url>
-
+  <properties>
+    <java.level>8</java.level>
+  </properties>
+  
   <dependencies>
     <dependency>
       <groupId>org.postgresql</groupId>
