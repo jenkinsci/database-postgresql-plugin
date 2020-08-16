@@ -3,37 +3,40 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>3.9</version>
+    <version>4.6</version>
     <relativePath />
   </parent>
 
-  <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>database-postgresql</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>${revision}${changelist}</version>
   <packaging>hpi</packaging>
   <name>PostgreSQL Database Plugin</name>
 
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/PostgreSQL+Database+Plugin</url>
+  <url>https://github.com/jenkinsci/database-postgresql-plugin</url>
   <properties>
+    <revision>1.2</revision>
+    <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
+    <jenkins.version>2.204.6</jenkins.version>
+    <database.version>1.6-SNAPSHOT</database.version>
   </properties>
   
   <dependencies>
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.2.5</version>
+      <version>42.2.15</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>database</artifactId>
-      <version>1.1</version>
+      <version>${database.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>database</artifactId>
       <classifier>tests</classifier>
-      <version>1.1</version>
+      <version>${database.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -56,6 +59,6 @@
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>HEAD</tag>
+    <tag>${scmTag}</tag>
   </scm>
 </project>
