@@ -4,6 +4,7 @@ import hudson.Extension;
 import hudson.Util;
 import hudson.util.FormValidation;
 import hudson.util.Secret;
+import java.io.Serializable;
 import org.jenkinsci.plugins.database.AbstractRemoteDatabase;
 import org.jenkinsci.plugins.database.AbstractRemoteDatabaseDescriptor;
 import org.kohsuke.stapler.DataBoundConstructor;
@@ -20,7 +21,10 @@ import java.util.Set;
 /**
  * @author Kohsuke Kawaguchi
  */
-public class PostgreSQLDatabase extends AbstractRemoteDatabase {
+public class PostgreSQLDatabase extends AbstractRemoteDatabase implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    
     @DataBoundConstructor
     public PostgreSQLDatabase(String hostname, String database, String username, Secret password, String properties) {
         super(hostname, database, username, password, properties);
