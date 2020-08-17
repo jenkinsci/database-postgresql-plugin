@@ -32,13 +32,6 @@
       <artifactId>database</artifactId>
       <version>${database.version}</version>
     </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>database</artifactId>
-      <classifier>tests</classifier>
-      <version>${database.version}</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <repositories>
