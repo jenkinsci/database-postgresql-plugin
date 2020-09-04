@@ -5,10 +5,12 @@ import hudson.Util;
 import hudson.util.FormValidation;
 import hudson.util.Secret;
 import java.io.Serializable;
+import jenkins.model.Jenkins;
 import org.jenkinsci.plugins.database.AbstractRemoteDatabase;
 import org.jenkinsci.plugins.database.AbstractRemoteDatabaseDescriptor;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
+import org.kohsuke.stapler.verb.POST;
 import org.postgresql.Driver;
 
 import java.io.IOException;
@@ -47,7 +49,10 @@ public class PostgreSQLDatabase extends AbstractRemoteDatabase implements Serial
             return "PostgreSQL";
         }
 
-        public FormValidation doCheckProperties(@QueryParameter String properties) throws IOException {
+        @POST
+        public FormValidation doCheckProperties(@QueryParameter String properties) {
+            Jenkins.get().checkPermission(Jenkins.ADMINISTER);
+            
             try {
                 Set<String> validPropertyNames = new HashSet<String>();
                 Properties props = Util.loadProperties(properties);
@@ -55,7 +60,7 @@ public class PostgreSQLDatabase extends AbstractRemoteDatabase implements Serial
                     validPropertyNames.add(p.name);
                 }
 
-                for (Map.Entry e : props.entrySet()) {
+                for (Map.Entry<Object, Object> e : props.entrySet()) {
                     String key = e.getKey().toString();
                     if (!validPropertyNames.contains(key))
                         return FormValidation.error("Unrecognized property: "+key);
