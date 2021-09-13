@@ -18,7 +18,7 @@
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
     <jenkins.version>2.204.6</jenkins.version>
-    <database.version>1.9</database.version>
+    <database.version>114.v0e004e100040</database.version>
   </properties>
   
   <dependencies>
