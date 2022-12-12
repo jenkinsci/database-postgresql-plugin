@@ -17,7 +17,7 @@
     <revision>1.3</revision>
     <changelist>-SNAPSHOT</changelist>
     <jenkins.version>2.361.4</jenkins.version>
-    <database.version>1.9</database.version>
+    <database.version>166.vf8eb_e4c80a_5d</database.version>
   </properties>
   
   <dependencies>
