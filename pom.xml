@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.55</version>
+    <version>4.56</version>
     <relativePath />
   </parent>
 
@@ -15,8 +15,7 @@
   <url>https://github.com/jenkinsci/database-postgresql-plugin</url>
   <properties>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.version>2.361.4</jenkins.version>
-    <database.version>1.9</database.version>
+    <jenkins.version>2.387.1</jenkins.version>
   </properties>
   
   <dependencies>
@@ -26,9 +25,9 @@
       <version>42.5.4</version>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>database</artifactId>
-      <version>${database.version}</version>
+      <version>191.vd5981b_97a_5fa_</version>
     </dependency>
   </dependencies>
 
