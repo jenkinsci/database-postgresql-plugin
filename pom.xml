@@ -8,14 +8,13 @@
   </parent>
 
   <artifactId>database-postgresql</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>${changelist}</version>
   <packaging>hpi</packaging>
   <name>PostgreSQL Database Plugin</name>
 
   <url>https://github.com/jenkinsci/database-postgresql-plugin</url>
   <properties>
-    <revision>1.3</revision>
-    <changelist>-SNAPSHOT</changelist>
+    <changelist>999999-SNAPSHOT</changelist>
     <jenkins.version>2.387.1</jenkins.version>
   </properties>
   
