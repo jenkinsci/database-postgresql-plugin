@@ -6,6 +6,8 @@
     "schedule:earlyMondays"
   ],
   "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
   "labels": [
     "dependencies"
   ],
