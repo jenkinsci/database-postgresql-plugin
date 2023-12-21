@@ -4,7 +4,6 @@ import hudson.Extension;
 import hudson.Util;
 import hudson.util.FormValidation;
 import hudson.util.Secret;
-import java.io.Serializable;
 import jenkins.model.Jenkins;
 import org.jenkinsci.plugins.database.AbstractRemoteDatabase;
 import org.jenkinsci.plugins.database.AbstractRemoteDatabaseDescriptor;
@@ -12,8 +11,6 @@ import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.verb.POST;
 import org.postgresql.Driver;
-
-import java.io.IOException;
 import java.sql.DriverPropertyInfo;
 import java.util.HashSet;
 import java.util.Map;
@@ -23,7 +20,7 @@ import java.util.Set;
 /**
  * @author Kohsuke Kawaguchi
  */
-public class PostgreSQLDatabase extends AbstractRemoteDatabase implements Serializable {
+public class PostgreSQLDatabase extends AbstractRemoteDatabase {
 
     private static final long serialVersionUID = 1L;
     
