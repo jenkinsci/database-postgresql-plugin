@@ -18,7 +18,7 @@
     <jenkins.version>2.414.3</jenkins.version>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
     <!-- Test dependencies version -->
-    <testcontainer.version>1.19.7</testcontainer.version>
+    <testcontainer.version>1.19.8</testcontainer.version>
   </properties>
   <dependencyManagement>
     <dependencies>
